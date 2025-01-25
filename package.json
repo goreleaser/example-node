@@ -1,0 +1,33 @@
+{
+  "name": "example-node",
+  "version": "1.0.0",
+  "description": "Example Node project using GoReleaser",
+  "main": "main.ts",
+  "scripts": {
+    "build": "ncc build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goreleaser/example-node.git"
+  },
+  "keywords": [
+    "goreleaser",
+    "nodejs",
+    "javascript",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goreleaser/example-node/issues"
+  },
+  "homepage": "https://github.com/goreleaser/example-node#readme",
+  "dependencies": {
+    "commander": "^13.1.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.3",
+    "typescript": "^5.7.3"
+  }
+}
