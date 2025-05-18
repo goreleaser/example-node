@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/goreleaser/example-node#readme",
   "dependencies": {
-    "commander": "^13.1.0"
+    "commander": "^14.0.0"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.38.3",
