@@ -1,5 +1,5 @@
 {
-  "name": "example-node",
+  "name": "@goreleaser/example-node",
   "version": "1.0.0",
   "description": "Example Node project using GoReleaser",
   "main": "main.ts",
