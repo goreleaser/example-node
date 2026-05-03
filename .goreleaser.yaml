@@ -9,15 +9,19 @@
 version: 2
 pro: true
 
+# install dependencies and run any build scripts we might need before anything
+# else:
 before:
   hooks:
     - npm ci
     - npm run build
 
+# once everything succeeded, let's publish to npm as well:
 after:
   hooks:
     - "{{ if .IsRelease }}npm publish --access=public{{ end }}"
 
+# ./out/index.js is created by `npm run build`, and is our main:
 builds:
   - builder: node
     main: ./out/index.js
