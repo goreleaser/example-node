@@ -3,17 +3,20 @@
 
 # The lines below are called `modelines`. See `:help modeline`
 # Feel free to remove those if you don't want/need to use them.
-# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+# yaml-language-server: $schema=https://goreleaser.com/static/schema-pro.json
 # vim: set ts=2 sw=2 tw=0 fo=cnqoj
 
 version: 2
-
-project_name: example
+pro: true
 
 before:
   hooks:
     - npm ci
     - npm run build
+
+after:
+  hooks:
+    - npm publish --access=public
 
 builds:
   - builder: node
