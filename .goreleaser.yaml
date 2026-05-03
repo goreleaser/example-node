@@ -16,7 +16,7 @@ before:
 
 after:
   hooks:
-    - npm publish --access=public
+    - "{{ if .IsRelease }}npm publish --access=public{{ end }}"
 
 builds:
   - builder: node
