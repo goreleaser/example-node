@@ -1,10 +1,11 @@
 {
   "name": "@goreleaser/example-node",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Example Node project using GoReleaser",
   "main": "main.ts",
   "scripts": {
     "build": "ncc build -o ./out/",
+    "release": "./scripts/bump.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
