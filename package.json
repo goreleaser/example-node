@@ -4,7 +4,7 @@
   "description": "Example Node project using GoReleaser",
   "main": "main.ts",
   "scripts": {
-    "build": "ncc build -o ./out/",
+    "build": "tsc --noEmit && esbuild main.ts --bundle --platform=node --target=node25 --format=cjs --outfile=out/index.js",
     "release": "./scripts/bump.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,8 +28,8 @@
     "commander": "^15.0.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.45.0",
-    "typescript": "^6.0.3"
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
   },
   "engines": {
     "node": ">=25.5 <26"
